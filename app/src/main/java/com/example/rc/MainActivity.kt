@@ -12,7 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        adapter = Adapter()
+        val listName = mutableListOf<String>("Alex", "Marina", "Jhon")
+        val listCompany = mutableListOf<String>("Google", "Amazon", "Netflix")
+        adapter = Adapter(listName, listCompany)
 
         binding.rcView.layoutManager = LinearLayoutManager(this)
         binding.rcView.adapter = adapter
