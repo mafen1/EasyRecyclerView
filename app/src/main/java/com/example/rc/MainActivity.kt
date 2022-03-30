@@ -7,17 +7,23 @@ import com.example.rc.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
-    val adapter = Adapter()
+    val adapterRC = Adapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initData()
+        initView()
 
-        binding.rcView.layoutManager = LinearLayoutManager(this)
-        binding.rcView.adapter = adapter
+
+    }
+    private fun initView(){
+        binding.rcView.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = adapterRC
+        }
     }
     private fun initData(){
-        adapter.list = FillingInfo().user
+        adapterRC.list = FillingInfo().user
     }
 }
