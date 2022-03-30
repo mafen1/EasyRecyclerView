@@ -4,12 +4,9 @@ import android.util.Log
 import com.example.rc.data.Person
 
 class FillingInfo(
-    listName: MutableList<String>,
-    listCompany: MutableList<String>
 ) {
-
-
-
+    val listName = mutableListOf<String>("Alex", "Marina", "Jhon")
+    val listCompany = mutableListOf<String>("Google", "Amazon", "Netflix")
         val user: MutableList<Person> = (0..100).map {
             Person(
                 id = it,
@@ -18,5 +15,8 @@ class FillingInfo(
                 years = it
             )
         }.toMutableList()
-
+    fun fillingInfo(){
+        listName.shuffle()
+        listCompany.shuffle()
+    }
 }

@@ -8,23 +8,17 @@ import com.example.rc.data.Person
 import com.example.rc.databinding.PersonItemLayoutBinding
 
 class Adapter(
-    listName: MutableList<String>,
-    listCompany: MutableList<String>
 ) : RecyclerView.Adapter<Adapter.MyViewHolder>() {
 
         val TAG = "TAG"
 
 
 
-    var list: List<Person> = FillingInfo(listName, listCompany).user
+    var list: List<Person> = emptyList()
         set(value) {
             field = value
             notifyDataSetChanged()
         }
-
-
-
-
 
     class MyViewHolder(
         val binding: PersonItemLayoutBinding
