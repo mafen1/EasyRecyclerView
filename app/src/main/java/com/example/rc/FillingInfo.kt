@@ -1,11 +1,12 @@
 package com.example.rc
 
-import android.util.Log
 import com.example.rc.data.Person
 
+typealias UsersListener = (users: List<Person>) -> Unit
 class FillingInfo {
-    val listName = mutableListOf<String>("Alex", "Marina", "Jhon")
-    val listCompany = mutableListOf<String>("Google", "Amazon", "Netflix")
+    val listName = mutableListOf("Alex", "Marina", "Jhon")
+    val listCompany = mutableListOf("Google", "Amazon", "Netflix")
+
         val user: MutableList<Person> = (0..100).map {
             Person(
                 id = it,
@@ -15,7 +16,16 @@ class FillingInfo {
             )
         }.toMutableList()
 
-    fun fillingInfo(){
+    fun deleteUser(person: Person){
+        val indexToDelete = user.indexOfFirst { it.id == person.id }
+        if (indexToDelete != 1){
+            user.removeAt(indexToDelete)
+        }
+    }
+
+
+
+    fun shuffleLists(){
         listName.shuffle()
         listCompany.shuffle()
     }
