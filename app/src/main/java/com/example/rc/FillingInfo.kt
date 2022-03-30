@@ -3,8 +3,7 @@ package com.example.rc
 import android.util.Log
 import com.example.rc.data.Person
 
-class FillingInfo(
-) {
+class FillingInfo {
     val listName = mutableListOf<String>("Alex", "Marina", "Jhon")
     val listCompany = mutableListOf<String>("Google", "Amazon", "Netflix")
         val user: MutableList<Person> = (0..100).map {

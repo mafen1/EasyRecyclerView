@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun initData(){
+        FillingInfo().fillingInfo()
         adapterRC.list = FillingInfo().user
     }
 }

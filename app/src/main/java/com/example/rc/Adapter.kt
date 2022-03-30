@@ -7,13 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.rc.data.Person
 import com.example.rc.databinding.PersonItemLayoutBinding
 
-class Adapter(
-) : RecyclerView.Adapter<Adapter.MyViewHolder>() {
-
-        val TAG = "TAG"
-
-
-
+class Adapter : RecyclerView.Adapter<Adapter.MyViewHolder>() {
     var list: List<Person> = emptyList()
         set(value) {
             field = value
