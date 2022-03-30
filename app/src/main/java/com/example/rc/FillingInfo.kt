@@ -14,6 +14,7 @@ class FillingInfo {
                 years = it
             )
         }.toMutableList()
+
     fun fillingInfo(){
         listName.shuffle()
         listCompany.shuffle()
