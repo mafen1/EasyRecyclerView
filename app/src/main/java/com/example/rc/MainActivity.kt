@@ -27,11 +27,11 @@ class MainActivity : AppCompatActivity() {
         binding.rcView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = adapterRC
+
         }
     }
 
     private fun initData(){
-        FillingInfo().shuffleLists()
         adapterRC.list = FillingInfo().user
     }
 
